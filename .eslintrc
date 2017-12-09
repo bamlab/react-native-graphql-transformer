@@ -1,3 +1,9 @@
 {
-  "extends": ["airbnb"]
+  "extends": ["airbnb"],
+  "rules": {
+    "global-require": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "no-param-reassign": "off"
+  }
 }
