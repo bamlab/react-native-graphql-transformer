@@ -1,0 +1,27 @@
+{
+  "name": "react-native-graphql-transformer",
+  "version": "1.0.0",
+  "description": "Transform GraphQL source files with ReactNative",
+  "main": "index.js",
+  "repository": "git@github.com:bamlab/react-native-graphql-transformer.git",
+  "author": "Thomas Pucci",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint '**/*.{js,jsx}' --quiet",
+    "format": "prettier --write '**/*.{js,jsx}'"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.45.0"
+  },
+  "dependencies": {
+    "graphql-tag": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "prettier": "^1.9.1"
+  }
+}
