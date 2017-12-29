@@ -1,5 +1,5 @@
 {
-  "name": "@bam.tech/react-native-graphql-transformer",
+  "name": "react-native-graphql-transformer",
   "version": "0.1.1",
   "description": "Transform GraphQL source files with ReactNative",
   "main": "index.js",
