@@ -39,7 +39,7 @@ function transform(src, filename, options) {
     result = gqlTransform(result);
   }
 
-  const babelCompileResult = upstreamTransformer({
+  const babelCompileResult = upstreamTransformer.transform({
     src: result,
     filename,
     options,

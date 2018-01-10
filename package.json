@@ -1,6 +1,6 @@
 {
   "name": "@bam.tech/react-native-graphql-transformer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Transform GraphQL source files with ReactNative",
   "main": "index.js",
   "repository": "git@github.com:bamlab/react-native-graphql-transformer.git",
