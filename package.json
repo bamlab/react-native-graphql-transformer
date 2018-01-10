@@ -1,6 +1,6 @@
 {
-  "name": "react-native-graphql-transformer",
-  "version": "0.1.1",
+  "name": "@bam.tech/react-native-graphql-transformer",
+  "version": "0.1.2",
   "description": "Transform GraphQL source files with ReactNative",
   "main": "index.js",
   "repository": "git@github.com:bamlab/react-native-graphql-transformer.git",
@@ -16,7 +16,8 @@
     "react-native": ">=0.45.0"
   },
   "dependencies": {
-    "graphql-tag": "^2.6.0"
+    "graphql-tag": "^2.6.0",
+    "semver": "^5.4.1"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.10.0",

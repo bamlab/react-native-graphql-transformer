@@ -1,23 +1,26 @@
 const gqlLoader = require('graphql-tag/loader');
+const semver = require('semver');
 
-let rnTransform = null;
+let upstreamTransformer = null;
 
-try {
-  // handle RN >= 0.47
-  rnTransform = require('metro-bundler/src/transformer').transform;
-} catch (e) {
-  try {
-    // handle RN 0.46
-    rnTransform = require('metro-bundler/build/transformer').transform;
-  } catch (e2) {
-    // handle RN <= 0.45
-    const oldrnTransform = require('react-native/packager/transformer').transform;
-    rnTransform = {
-      transform({ src, filename, options }) {
-        return oldrnTransform.transform(src, filename, options);
-      },
-    };
-  }
+const reactNativeVersionString = require('react-native/package.json').version;
+
+const reactNativeMinorVersion = semver(reactNativeVersionString).minor;
+
+if (reactNativeMinorVersion >= 52) {
+  upstreamTransformer = require('metro/src/transformer');
+} else if (reactNativeMinorVersion >= 0.47) {
+  upstreamTransformer = require('metro-bundler/src/transformer');
+} else if (reactNativeMinorVersion === 0.46) {
+  upstreamTransformer = require('metro-bundler/build/transformer');
+} else {
+  // handle RN <= 0.45
+  const oldUpstreamTransformer = require('react-native/packager/transformer');
+  upstreamTransformer = {
+    transform({ src, filename, options }) {
+      return oldUpstreamTransformer.transform(src, filename, options);
+    },
+  };
 }
 
 const gqlTransform = gqlLoader.bind({
@@ -36,7 +39,7 @@ function transform(src, filename, options) {
     result = gqlTransform(result);
   }
 
-  const babelCompileResult = rnTransform({
+  const babelCompileResult = upstreamTransformer({
     src: result,
     filename,
     options,
