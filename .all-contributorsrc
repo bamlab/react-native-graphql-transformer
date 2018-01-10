@@ -17,6 +17,15 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "tychota",
+      "name": "TychoTa",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13785185?v=4",
+      "profile": "https://twitter.com/TychoTa",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
