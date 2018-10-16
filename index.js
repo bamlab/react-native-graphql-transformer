@@ -7,7 +7,9 @@ const reactNativeVersionString = require('react-native/package.json').version;
 
 const reactNativeMinorVersion = semver(reactNativeVersionString).minor;
 
-if (reactNativeMinorVersion >= 52) {
+if (reactNativeMinorVersion >= 56) {
+  upstreamTransformer = require('metro/src/reactNativeTransformer')
+} else if (reactNativeMinorVersion >= 52) {
   upstreamTransformer = require('metro/src/transformer');
 } else if (reactNativeMinorVersion >= 0.47) {
   upstreamTransformer = require('metro-bundler/src/transformer');
