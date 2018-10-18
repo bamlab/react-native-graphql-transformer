@@ -1,6 +1,6 @@
 # react-native-graphql-transformer
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 Seamlessly use GraphQL files with react-native >= 0.45
 
@@ -59,8 +59,8 @@ following
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/16262904?v=4" width="100px;"/><br /><sub><b>Thomas Pucci</b></sub>](https://github.com/tpucci)<br />[💻](https://github.com/bamlab/react-native-graphql-transformer/commits?author=tpucci "Code") [📖](https://github.com/bamlab/react-native-graphql-transformer/commits?author=tpucci "Documentation") [💡](#example-tpucci "Examples") | [<img src="https://avatars2.githubusercontent.com/u/13785185?v=4" width="100px;"/><br /><sub><b>TychoTa</b></sub>](https://twitter.com/TychoTa)<br />[💻](https://github.com/bamlab/react-native-graphql-transformer/commits?author=tychota "Code") |
-| :---: | :---: |
+| [<img src="https://avatars1.githubusercontent.com/u/16262904?v=4" width="100px;"/><br /><sub><b>Thomas Pucci</b></sub>](https://github.com/tpucci)<br />[💻](https://github.com/bamlab/react-native-graphql-transformer/commits?author=tpucci "Code") [📖](https://github.com/bamlab/react-native-graphql-transformer/commits?author=tpucci "Documentation") [💡](#example-tpucci "Examples") | [<img src="https://avatars2.githubusercontent.com/u/13785185?v=4" width="100px;"/><br /><sub><b>TychoTa</b></sub>](https://twitter.com/TychoTa)<br />[💻](https://github.com/bamlab/react-native-graphql-transformer/commits?author=tychota "Code") | [<img src="https://avatars2.githubusercontent.com/u/9041221?v=4" width="100px;"/><br /><sub><b>Clément Taboulot</b></sub>](https://github.com/taboulot)<br />[💻](https://github.com/bamlab/react-native-graphql-transformer/commits?author=taboulot "Code") |
+| :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
