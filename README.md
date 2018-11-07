@@ -37,6 +37,28 @@ query PostListItemQuery($id: ID) {
 
 Add this to your rn-cli.config.js (make one if you don't have one already):
 
+#### react-native 0.57 or later
+
+```js
+const { getDefaultConfig } = require('metro-config');
+
+module.exports = (async () => {
+  const {
+    resolver: { sourceExts },
+  } = await getDefaultConfig();
+  return {
+    transformer: {
+      babelTransformerPath: require.resolve('react-native-graphql-transformer'),
+    },
+    resolver: {
+      sourceExts: [...sourceExts, 'gql', 'graphql'],
+    },
+  };
+})();
+```
+
+#### react-native 0.56 or earlier
+
 ```js
 module.exports = {
   getTransformModulePath() {
