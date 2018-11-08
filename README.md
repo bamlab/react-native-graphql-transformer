@@ -31,7 +31,7 @@ query PostListItemQuery($id: ID) {
 
 ### Step 1: Install
 
-    yarn add -D react-native-graphql-transformer
+    yarn add -D @bam.tech/react-native-graphql-transformer
 
 ### Step 2: Configure the react native packager
 
@@ -48,7 +48,9 @@ module.exports = (async () => {
   } = await getDefaultConfig();
   return {
     transformer: {
-      babelTransformerPath: require.resolve('react-native-graphql-transformer'),
+      babelTransformerPath: require.resolve(
+        '@bam.tech/react-native-graphql-transformer'
+      ),
     },
     resolver: {
       sourceExts: [...sourceExts, 'gql', 'graphql'],
@@ -62,7 +64,7 @@ module.exports = (async () => {
 ```js
 module.exports = {
   getTransformModulePath() {
-    return require.resolve('react-native-graphql-transformer');
+    return require.resolve('@bam.tech/react-native-graphql-transformer');
   },
   getSourceExts() {
     return ['gql', 'graphql'];
