@@ -38,20 +38,20 @@ query PostListItemQuery($id: ID) {
 Add this to your rn-cli.config.js (make one if you don't have one already):
 
 ```js
-module.exports = {
-  getTransformModulePath() {
-    return require.resolve('react-native-graphql-transformer');
-  },
-  getSourceExts() {
-    return ['gql', 'graphql'];
-  }
-};
+const { getDefaultConfig } = require('metro-config');
+
+module.exports = (async () => {
+  const { resolver: { sourceExts } } = await getDefaultConfig();
+  return {
+    transformer: {
+      babelTransformerPath: require.resolve('@bam.tech/react-native-graphql-transformer'),
+    },
+    resolver: {
+      sourceExts: [...sourceExts, 'gql', 'graphql'],
+    },
+  };
+})();
 ```
-
-If you need to run the packager directly from the command line, run the
-following
-
-    react-native start --transformer node_modules/react-native-graphql-transformer/index.js --sourceExts gql,graphql
 
 ### Step 3: Write GraphQL code!
 
