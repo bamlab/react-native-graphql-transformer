@@ -44,6 +44,33 @@
       "contributions": [
         "example"
       ]
+    },
+    {
+      "login": "ajubin",
+      "name": "ajubin",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/14874974?v=4",
+      "profile": "https://github.com/ajubin",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "smeevil",
+      "name": "Gerard de Brieder",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13874?v=4",
+      "profile": "https://github.com/smeevil",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "mlc",
+      "name": "mike castleman",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1211?v=4",
+      "profile": "https://mlcastle.net/",
+      "contributions": [
+        "doc"
+      ]
     }
   ]
 }
