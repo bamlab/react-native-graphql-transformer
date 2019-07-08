@@ -5,11 +5,11 @@ let upstreamTransformer = null;
 
 const reactNativeVersionString = require('react-native/package.json').version;
 
-const metroVersion = parseFloat(require('metro/package.json').version);
+const metroVersion = semver(require('metro/package.json').version).minor;
 
 const reactNativeMinorVersion = semver(reactNativeVersionString).minor;
 
-if (metroVersion >= 0.51) {
+if (metroVersion >= 51) {
   upstreamTransformer = require('metro-react-native-babel-transformer/src/index');
 } else if (reactNativeMinorVersion >= 56) {
   upstreamTransformer = require('metro/src/reactNativeTransformer');
